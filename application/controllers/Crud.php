@@ -13,6 +13,20 @@ class Crud extends CI_Controller{
         $this->load->model('Crud_model');
         $this->Crud_model->add_article($data);
     }
+
+    public function edit_article(){
+        $data['title'] = "5 стаття НОВА";
+        $data['text'] = "блаблабааФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФ";
+        $data['data'] = "2013-05-07";
+
+        $this->load->model('Crud_model');
+        $this->Crud_model->edit_article($data);
+    }
+
+    public function del_article(){
+        $this->load->model('Crud_model');
+        $this->Crud_model->del_article();
+    }
 }
 
 ?>
