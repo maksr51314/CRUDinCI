@@ -5,8 +5,13 @@ class Crud extends CI_Controller{
         $this->load->view('Crud_view');
     }
 
-    public function add_articles(){
-        
+    public function add_article(){
+        $data['title'] = "5 стаття";
+        $data['text'] = "блаблабаа";
+        $data['data'] = "2013-05-03";
+
+        $this->load->model('Crud_model');
+        $this->Crud_model->add_article($data);
     }
 }
 
